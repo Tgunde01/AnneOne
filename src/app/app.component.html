@@ -1,0 +1,56 @@
+<!--Interpolation-->
+<div [ngClass]="{'text-border': true}">
+    <H1 [innerText]="title"></H1>
+</div>
+<img src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg" width="1200" height="250" > 
+<!--NG-Class- use this second on title-->
+<div [ngClass]="{'text-border': true}">
+    <h2> Welcome!</h2>
+    <h3> Please Login</h3>
+</div>
+<p>
+<div class="row">
+<div class="column" style="background-color: #8b6ac7;">
+<!--NG-Style- use this one on title-->
+<div [ngStyle]="{'font-style': 'italic', 'color': 'black','background':'lightblue'}">
+    <h1>THIS LOGIN IS FOR CLIENTS</h1>
+</div>
+<form action="" method="Post">
+<img src="C:\Users\imtg0\Downloads\ProjectLockScreen.jpg"alt="Login" width="150" height="150">
+<br>
+<h3>Client User</h3>
+<input type="text" name="txtUserName" placeholder="john@example.com" required>
+<br>
+<b>Password</b>
+<br>
+<input type="password" name="txtPassword" placeholder="minimum 6 characters" required>
+<br>
+<input type="checkbox" checked="checked"name="checked" name="rememberMe">Remeber Me
+<!--Event Binding-->
+<button (click)="onSave()">Save</button>
+<br>
+{{savedMessage}}
+<br>
+<br>
+<a href="register.html">New User? Register Here</a>
+</form>
+</div>
+<p>
+<div class="row">
+<div class="column" style="background-color:#8b6ac7;">
+<!--NG-Style- use this one on title-->
+<div [ngStyle]="{'font-style': 'italic', 'color': 'black','background':'lightblue'}">
+    <h1>THIS LOGIN IS FOR RESPRESENTATIVES</h1>
+</div>
+<form action="" method="Post">
+<img src="C:\Users\imtg0\Downloads\ProjectLockScreen.jpg" alt="Login" width="150" height="150">
+<h3>Administatrive User</h3>
+<input type="text" name="txtUserName" placeholder="john@example.com" required>
+<br>
+<b>Password</b>
+<br>
+<input type="password" name="txtPassword" placeholder="minimum 6 characters" required>
+<br>
+<input type="checkbox" checked="checked"name="checked" name="rememberMe">Remeber Me
+<!--Property Binding-->
+<button [disabled]="isDisabled">Submit</button>
